@@ -16,7 +16,7 @@ public:
 	void selectPuzzle();	//selects a specific puzzle
 	void makeMove();	//makes a move
 	bool isWin(); //checks if the game is won
-	private:
+private:
 	string puzzle;	//stores puzzle name
 	int game;	//stores game choice
 	int choice;	//used to store User choices for switch statements
