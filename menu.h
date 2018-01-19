@@ -8,10 +8,7 @@ using namespace std;
 
 class menuSys	//menu class for user traversal
 {
-private:
-	string puzzle;	//stores puzzle name
-	int game;	//stores game choice
-	int choice;	//used to store User choices for switch statements
+
 public:
 	menuSys();	//standard constructor
 	~menuSys();	//standard destructor
@@ -19,6 +16,10 @@ public:
 	void selectPuzzle();	//selects a specific puzzle
 	void makeMove();	//makes a move
 	bool isWin(); //checks if the game is won
+	private:
+	string puzzle;	//stores puzzle name
+	int game;	//stores game choice
+	int choice;	//used to store User choices for switch statements
 };
 
 void menuSys::selectGame()
@@ -35,7 +36,7 @@ void menuSys::selectGame()
 	case '2':
 		cout << "Neat! Rullo Rules!" << endl;
 		break;
-	default:
+	default://change this to either recurse or exit
 		cout << "You miscreant! It's Nonograms for you!" << endl;
 		a = 1;
 		break;
@@ -47,6 +48,7 @@ void menuSys::selectPuzzle()
 	cout << "Now, please select a puzzle name: ";
 	cin >> puzzle;
 	cout << endl << "thanks! you will open " << puzzle << "!" << endl;
+	
 };
 void menuSys::makeMove()
 {
