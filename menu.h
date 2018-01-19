@@ -20,12 +20,13 @@ private:
 	string puzzle;	//stores puzzle name
 	int game;	//stores game choice
 	int choice;	//used to store User choices for switch statements
+	bool isPlaying = TRUE;	//used to track if the user is still wanting to play
 };
 
 void menuSys::selectGame()
 {
 	int a;
-	cout << "Please pick a number between 1 and 2:" << endl << "1=picross   2=rullo" << endl;
+	cout << "Please pick a number between 1 and 2:" << endl << "1=picross   2=rullo" << endl << "Or type 9 to exit." << endl;
 	cin >> a;
 	cout << endl;
 	switch (a)
@@ -35,6 +36,10 @@ void menuSys::selectGame()
 		break;
 	case '2':
 		cout << "Neat! Rullo Rules!" << endl;
+		break;
+	case '9':
+		cout << "Sorry to see you go, but have a nice day." << endl;
+		isPlaying = FALSE;
 		break;
 	default://change this to either recurse or exit
 		cout << "You miscreant! It's Nonograms for you!" << endl;
